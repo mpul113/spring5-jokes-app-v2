@@ -15,7 +15,8 @@ public class JokeController {
         this.jokeService = jokeService;
     }
 
-    @RequestMapping("/")
+    //You can pass in an array for multiple endpoints
+    @RequestMapping({"/", ""})
     public String sayJoke(Model model) {
 
         model.addAttribute("Joke", jokeService.sayJoke());
